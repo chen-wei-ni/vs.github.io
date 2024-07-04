@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
+*
+    margin: 0
+    padding: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    font-family: "Rubik", sans-serif
+ul, ol
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+    content: ''
+    content: none
+
+img
+    width: 100%
+    height: auto
+
+$blue: #2455FF
+$yellow: #FFC700
+$red: #D11010
+$orange: #FF4D00
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+body,html
+    +size(100%)
+    overflow: hidden
+.wrapper
+    +size(100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 10px 0 0 0
+    .top-container
+        position: relative
+        +size(894px,279.38px)
+        background: url("../images/bn.png") top center no-repeat
+        background-size: contain
+        text-align: center
+        h1
+            font-size: 4rem
+            font-weight: 700
+            color: $red
+            text-shadow: 0 5px 0 $yellow
+            margin-top: 160px
+    .bottom-container
+        // position: relative
+        display: flex
+        justify-content: center
+        margin-top: -12px
+
+        .box
+            +size(300px,90px)
+            background-color: #fff
+            position: absolute
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            align-items: center
+            border-radius: 100vmax
+            .title
+                +size(162px,60px)
+                position: absolute
+                top: -50px
+                filter: drop-shadow(5px 5px 5px rgba(#000,0.5))
+            p
+                display: flex
+                justify-content: center
+                strong
+                    line-height: 1.5
+                    display: block
+                    font-size: 28px
+            .number-of-people
+                display: inline-flex
+                justify-content: center
+                align-items: flex-end
+                +size(100%,35%)
+                border-radius: 0 0 100vmax 100vmax
+                figure
+                    width: 18px
+                    margin: 0 5px
+                span
+                    color: #fff
+                    line-height: 1.4
+                    font-weight: 700
+                    text-shadow: 0 0 2px #000
+        .vs-icon
+            margin-top: -5px
+            width: 70px
+            z-index: 3
+            animation: scaleVs 2s infinite
+            @keyframes scaleVs
+                0%
+
+                50%
+                    transform: scale(1.15)
+
+                100%
+
+        .jackpot
+            border: 6px solid $blue
+            right: 49%
+            z-index: 1
+            strong
+                color: $blue
+            .number-of-people
+                background-color: $blue
+
+        .crazy-time
+            border: 6px solid $yellow
+            left: 49%
+            z-index: 2
+            strong
+                color: $orange
+            .number-of-people
+                flex-direction: row-reverse
+                background-color: $yellow
+        &.a-mode
+            .jackpot
+                right: inherit
+                left: 49%
+                z-index: 2
+            .crazy-time
+                left: inherit
+                right: 49%
+                z-index: 1
+@media screen and ( max-width: 900px )
+    .wrapper
+        .top-container
+            min-width: 600px
+            width: 100vw
+            height: 30vw
+            h1
+                font-size: 3.5rem
+                margin-top: 17%
+        .bottom-container
+            margin-top: 20px
+
+@media screen and ( max-width: 767px )
+    .wrapper
+        .top-container
+            min-width: initial
+            h1
+                font-size: 2.8rem
+                margin-top: 17.2%
+        .bottom-container
+            margin-top: 8%
+            .box
+                width: 50vw
+                .title
+                    top: -43px
+                    // position: static
+                .number-of-people
+                    width: 99%
+@media screen and ( max-width: 500px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 2rem
+        .bottom-container
+            .box
+                p
+                    strong
+                        font-size: 1.4rem
+            .jackpot
+                right: 47%
+                p
+                    margin-right: 20%
+            .crazy-time
+                left: 47%
+                p
+                    margin-left: 20%
+            &.a-mode
+                .jackpot
+                    left: 47%
+                    p
+                        margin-right: initial
+                        margin-left: 20%
+                .crazy-time
+                    right: 47%
+                    p
+                        margin-left: initial
+                        margin-right: 20%
+@media screen and ( max-width: 375px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 1.8rem
+@media screen and ( max-width: 360px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 1.5rem
+                margin-top: 16%
