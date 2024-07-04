@@ -56,41 +56,36 @@ function formatCurrency(input, blur) {
     input = input_val;
     return input;
 }
-let ar0 = 1003183.99; //原本金額
-let ar = 1003283.99; //新金額
+let ar0 = 1023183.2; //原本金額
+let ar = 1033200.55; //新金額
+let fn = formatCurrency(ar, "blur");
 anime({
     targets: ".bonus",
     innerHTML: [ar0, ar],
-    easing: "linear",
-    duration: 1000,
-    round: 1000,
+    easing: 'steps(35)',
+    duration: 2500,
+    round: 20,
     complete: function () {
         // let fn = formatCurrency(ar, "blur");
         // document.querySelector(".bonus").innerHTML = fn;
     },
 });
-anime({
-    targets: ".bonus",
-    innerHTML: [ar0, ar],
-    easing: "linear",
-    duration: 1000,
-    round: 1000,
-});
+
 let pz0 = 1000000; //原本金額
 let pz1 = 1000600; //新金額
 anime({
     targets: ".crazy-time .award",
     innerHTML: [pz0, pz1],
-    easing: "linear",
-    duration: 1000,
-    round: 1000,
+    easing: "steps(35)",
+    duration: 2000,
+    round: 1,
 });
 let aw0 = 1200000; //原本金額
 let aw1 = 1208600; //新金額
 anime({
     targets: ".jackpot .award",
     innerHTML: [aw0, aw1],
-    easing: "linear",
-    duration: 1000,
-    round: 1000,
+    easing: "steps(35)",
+    duration: 2000,
+    round: 1,
 });
