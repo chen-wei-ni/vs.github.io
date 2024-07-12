@@ -65,8 +65,9 @@ img {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   justify-content: space-around;
+  justify-items: center;
 }
 .wrapper .bottom-container .container .box {
   display: flex;
@@ -129,11 +130,19 @@ img {
   font-size: 1.8rem;
   font-weight: bold;
 }
+.wrapper .bottom-container .container .gif {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  grid-column: 2;
+  width: 109px;
+  height: auto;
+}
 .wrapper .bottom-container .container .teamA {
   grid-column: 1;
 }
 .wrapper .bottom-container .container .teamA .logo {
-  left: 12%;
+  left: 8%;
 }
 .wrapper .bottom-container .container .teamA .logo::after {
   -webkit-mask-image: url("../../images/vs/ct.png");
@@ -143,10 +152,10 @@ img {
   color: #FF4D00;
 }
 .wrapper .bottom-container .container .teamB {
-  grid-column: 2;
+  grid-column: 3;
 }
 .wrapper .bottom-container .container .teamB .logo {
-  right: 12%;
+  right: 8%;
 }
 .wrapper .bottom-container .container .teamB .logo::after {
   -webkit-mask-image: url("../../images/vs/jp.png");
@@ -221,26 +230,26 @@ img {
   text-shadow: 0 0 2px #000;
 }
 .wrapper .bottom-container .vs-bar .num-p.aTeam-num {
-  left: 1%;
+  left: 2%;
 }
 .wrapper .bottom-container .vs-bar .num-p.bTeam-num {
-  right: 1%;
+  right: 2%;
   flex-direction: row-reverse;
 }
 .wrapper .bottom-container.a-mode .container .teamA {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
 }
 .wrapper .bottom-container.a-mode .container .teamA .logo {
   left: initial;
-  right: 12%;
+  right: 8%;
 }
 .wrapper .bottom-container.a-mode .container .teamB {
   grid-row: 1;
   grid-column: 1;
 }
 .wrapper .bottom-container.a-mode .container .teamB .logo {
-  left: 12%;
+  left: 8%;
   right: initial;
 }
 .wrapper .bottom-container.a-mode .vs-bar {
@@ -251,12 +260,12 @@ img {
 }
 .wrapper .bottom-container.a-mode .vs-bar .num-p.aTeam-num {
   left: initial;
-  right: 1%;
+  right: 2%;
   flex-direction: row-reverse;
 }
 .wrapper .bottom-container.a-mode .vs-bar .num-p.bTeam-num {
   right: initial;
-  left: 1%;
+  left: 2%;
   flex-direction: row;
 }
 
@@ -521,23 +530,23 @@ img {
     min-width: initial;
   }
   .wrapper .top-container h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-top: 17.2%;
   }
   .wrapper .fishIcon {
     display: none;
   }
   .wrapper .bottom-container {
-    width: 100%;
+    width: 95%;
     height: 80px;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 0;
   }
   .wrapper .bottom-container .container .box .logo {
     width: 120px;
   }
   .wrapper .bottom-container .container .box h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .btn {
     margin: 15px 0 10px 0;
@@ -564,20 +573,23 @@ img {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
   .wrapper .top-container h1 {
     font-size: 2rem;
   }
-  .wrapper .bottom-container {
-    width: 95%;
+  .wrapper .bottom-container .container .box .logo {
+    top: -22px;
   }
-  .wrapper .bottom-container .container .teamA .logo {
+  .wrapper .bottom-container .container .box.teamA .logo {
     transform: translateX(-160px);
     left: 50%;
   }
-  .wrapper .bottom-container .container .teamB .logo {
+  .wrapper .bottom-container .container .box.teamB .logo {
     transform: translateX(160px);
     right: 50%;
+  }
+  .wrapper .bottom-container .container .gif {
+    width: 75px;
   }
   .wrapper .bottom-container .vs-bar .per-container .vs-mark {
     width: 32px;
@@ -621,6 +633,9 @@ img {
   }
   .wrapper .bottom-container {
     height: 75px;
+  }
+  .wrapper .bottom-container .container .box h1 {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 360px) {

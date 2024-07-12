@@ -13,7 +13,7 @@ closeBtn.addEventListener("click", () => {
     popup.animate(opacityClose, scaleTiming)
     setTimeout(() => {
         popup.style.display = "none";
-    }, 200);
+    }, 180);
     document.body.style.overflow = "";
 })
 

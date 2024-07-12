@@ -9,8 +9,8 @@ anime({
     round: 20,
 });
 
-let pz0 = 600; //原本金額
-let pz1 = 26601.66; //新金額
+let pz0 = 1622300; //原本金額
+let pz1 = 2660001.66; //新金額
 anime({
     targets: ".teamA h1",
     innerHTML: [pz0, pz1],
@@ -18,8 +18,8 @@ anime({
     duration: 2000,
     round: 20,
 });
-let aw0 = 1200.22; //原本金額
-let aw1 = 1208.66; //新金額
+let aw0 = 1102250.22; //原本金額
+let aw1 = 1200008.66; //新金額
 anime({
     targets: ".teamB h1",
     innerHTML: [aw0, aw1],

@@ -64,8 +64,9 @@ $orange: #FF4D00
             position: relative
             +size(100%,100%)
             display: grid
-            grid-template-columns: 1fr 1fr
+            grid-template-columns: 1fr 0.5fr 1fr
             justify-content: space-around
+            justify-items: center
             .box
                 display: flex
                 flex-direction: column
@@ -114,18 +115,25 @@ $orange: #FF4D00
                     font-size: 1.8rem
                     font-weight: bold
 
+            .gif
+                position: absolute
+                left: 0
+                bottom: 10px
+                grid-column: 2
+                +size(109px,auto)
+
             .teamA
                 grid-column: 1
                 .logo
-                    left: 12%
+                    left: 8%
                     &::after
                         mask-image: url('../../images/vs/ct.png')
                 h1
                     color: $orange
             .teamB
-                grid-column: 2
+                grid-column: 3
                 .logo
-                    right: 12%
+                    right: 8%
                     &::after
                         mask-image: url('../../images/vs/jp.png')
                 h1
@@ -184,23 +192,23 @@ $orange: #FF4D00
                     line-height: 1.2
                     text-shadow: 0 0 2px #000
                 &.aTeam-num
-                    left: 1%
+                    left: 2%
                 &.bTeam-num
-                    right: 1%
+                    right: 2%
                     flex-direction: row-reverse
         &.a-mode
             .container
                 .teamA
-                    grid-column: 2
+                    grid-column: 3
                     grid-row: 1
                     .logo
                         left: initial
-                        right: 12%
+                        right: 8%
                 .teamB
                     grid-row: 1
                     grid-column: 1
                     .logo
-                        left: 12%
+                        left: 8%
                         right: initial
             .vs-bar
                 background-color: $yellow
@@ -209,11 +217,11 @@ $orange: #FF4D00
                 .num-p
                     &.aTeam-num
                         left: initial
-                        right: 1%
+                        right: 2%
                         flex-direction: row-reverse
                     &.bTeam-num
                         right: initial
-                        left: 1%
+                        left: 2%
                         flex-direction: row
 .btn
     position: absolute
@@ -440,20 +448,20 @@ $orange: #FF4D00
         .top-container
             min-width: initial
             h1
-                font-size: 3rem
+                font-size: 2.8rem
                 margin-top: 17.2%
         .fishIcon
             display: none
         .bottom-container
-            +size(100%,80px)
-            margin-top: 5%
+            +size(95%,80px)
+            margin-top: 2%
             margin-bottom: 0
             .container
                 .box
                     .logo
                         width: 120px
                     h1
-                        font-size: 1.5rem
+                        font-size: 1.4rem
 
     .btn
         margin: 15px 0 10px 0
@@ -472,22 +480,28 @@ $orange: #FF4D00
         .close-btn
             +size(40px)
             font-size: 1.5rem
-@media screen and ( max-width: 500px )
+
+@media screen and ( max-width: 499px )
     .wrapper
         .top-container
             h1
                 font-size: 2rem
         .bottom-container
-            width: 95%
             .container
-                .teamA
+                .box
                     .logo
-                        transform: translateX(-160px)
-                        left: 50%
-                .teamB
-                    .logo
-                        transform: translateX(160px)
-                        right: 50%
+                        top: -22px
+                    &.teamA
+                        .logo
+                            transform: translateX(-160px)
+                            left: 50%
+                    &.teamB
+                        .logo
+                            transform: translateX(160px)
+                            right: 50%
+                .gif
+                    width: 75px
+
             .vs-bar
                 .per-container
                     .vs-mark
@@ -531,14 +545,10 @@ $orange: #FF4D00
                 font-size: 1.8rem
         .bottom-container
             height: 75px
-            // .container
-            //     .teamA
-            //         .logo
-            //             left: 8%
-            //     .teamB
-            //         .logo
-            //             right: 8%
-
+            .container
+                .box
+                    h1
+                        font-size: 1.2rem
 @media screen and ( max-width: 360px )
     .wrapper
         .top-container
