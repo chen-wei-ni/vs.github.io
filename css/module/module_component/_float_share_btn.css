@@ -1,0 +1,180 @@
+/*-- floating Button start --*/
+#floating-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #db4437;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #666;
+}
+
+.icon-share {
+  color: white;
+  width: 45px;
+  height: 45px;
+  line-height: 46px;
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+  animation: plus-out 0.3s;
+  transition: all 0.3s;
+}
+
+.icon-share.is-active {
+  animation: is-rotate 0.3s;
+}
+
+.nds span.icon-facebook, .nds span.icon-google-plus, .nds span.icon-line {
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 41px;
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 23px;
+  animation: plus-out 0.3s;
+  transition: all 0.3s;
+}
+
+.container-floating {
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  z-index: 990;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container-floating.cfl-active {
+  height: 200px;
+}
+
+.container-floating.cfl-active2 {
+  bottom: -300px;
+}
+
+@media (min-width: 500px) {
+  .container-floating {
+    bottom: 110px;
+  }
+}
+
+@media (min-width: 680px) {
+  .container-floating {
+    bottom: 35px;
+  }
+}
+
+@keyframes plus-out {
+  from {
+    opacity: 0;
+    transform: rotateZ(360deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes is-rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.nds {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  z-index: 300;
+  transform: scale(0);
+  cursor: pointer;
+}
+
+.nd1 {
+  background: #00c300;
+  bottom: 60px;
+  animation-delay: 0.2s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.nd3 {
+  background: #e93f2e;
+  bottom: 110px;
+  animation-delay: 0.15s;
+  animation: bounce-out-nds 0.15s linear;
+  animation-fill-mode: forwards;
+}
+
+.nd4 {
+  background: #4267b2;
+  bottom: 160px;
+  animation-delay: 0.1s;
+  animation: bounce-out-nds 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce-nds {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-out-nds {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.container-floating.cfl-active .nds {
+  animation: bounce-nds 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+.container-floating.cfl-active .nd3 {
+  animation-delay: 0.08s;
+}
+
+.container-floating.cfl-active .nd4 {
+  animation-delay: 0.15s;
+}
+
+.container-floating.cfl-active .nd5 {
+  animation-delay: 0.2s;
+}
+
+/*----*/

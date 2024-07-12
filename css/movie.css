@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+.game_con img{
+  animation:game 1.5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+    -moz-animation:game 1.5s; /* Firefox */
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -webkit-animation:game 1.5s; /* Safari and Chrome */
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    -o-animation:game 1.5s; /* Opera */
+    -o-animation-timing-function:linear;
+    -o-animation-iteration-count:infinite;
+}
+
+@keyframes game {
+  0%   {
+    transform:rotate(0deg);
+  }
+  25%   {
+    transform:rotate(5deg);
+  }
+  50%   {
+    transform:rotate(0deg);
+  }
+  75%   {
+    transform:rotate(-5deg);
+  }
+
+  100%  {
+    transform:rotate(-0deg);
+  }
+}
+
+@-moz-keyframes game {
+  0%   {
+    transform:rotate(0deg);
+  }
+  25%   {
+    transform:rotate(5deg);
+  }
+  50%   {
+    transform:rotate(0deg);
+  }
+  75%   {
+    transform:rotate(-5deg);
+  }
+
+  100%  {
+    transform:rotate(-0deg);
+  }
+}
+
+@-webkit-keyframes game {
+  0%   {
+    transform:rotate(0deg);
+  }
+  25%   {
+    transform:rotate(5deg);
+  }
+  50%   {
+    transform:rotate(0deg);
+  }
+  75%   {
+    transform:rotate(-5deg);
+  }
+
+  100%  {
+    transform:rotate(-0deg);
+  }
+}
+
+@-o-keyframes game {
+  0%   {
+    transform:rotate(0deg);
+  }
+  25%   {
+    transform:rotate(5deg);
+  }
+  50%   {
+    transform:rotate(0deg);
+  }
+  75%   {
+    transform:rotate(-5deg);
+  }
+
+  100%  {
+    transform:rotate(-0deg);
+  }
+}
+
+.game_body .light{
+  animation:light 5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+    -moz-animation:light 5s; /* Firefox */
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -webkit-animation:light 5s; /* Safari and Chrome */
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    -o-animation:light 5s; /* Opera */
+    -o-animation-timing-function:linear;
+    -o-animation-iteration-count:infinite;
+}
+
+@keyframes light {
+  0%{
+    left: -110%;
+  }
+  10%{
+    left: 110%;
+  }
+  100%{
+    left: 110%;
+  }
+}
+
+@-moz-keyframes light {
+  0%{
+    left: -110%;
+  }
+  10%{
+    left: 110%;
+  }
+  100%{
+    left: 110%;
+  }
+}
+
+@-webkit-keyframes light {
+  0%{
+    left: -110%;
+  }
+  10%{
+    left: 110%;
+  }
+  100%{
+    left: 110%;
+  }
+}
+
+@-o-keyframes light {
+  0%{
+    left: -110%;
+  }
+  10%{
+    left: 110%;
+  }
+  100%{
+    left: 110%;
+  }
+}
+
+.game_body .tag_box{
+  animation:tag 1.8s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+    -moz-animation:tag 1.8s; /* Firefox */
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -webkit-animation:tag 1.8s; /* Safari and Chrome */
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    -o-animation:tag 1.8s; /* Opera */
+    -o-animation-timing-function:linear;
+    -o-animation-iteration-count:infinite;
+}
+
+@keyframes tag {
+  0%{
+    filter: brightness(80%);
+  }
+  20%{
+    filter: brightness(150%);
+  }
+  100%{
+    filter: brightness(80%);
+  }
+}
+
+@-moz-keyframes tag {
+  0%{
+    filter: brightness(80%);
+  }
+  20%{
+    filter: brightness(150%);
+  }
+  100%{
+    filter: brightness(80%);
+  }
+}
+
+@-webkit-keyframes tag {
+  0%{
+    filter: brightness(80%);
+  }
+  20%{
+    filter: brightness(150%);
+  }
+  100%{
+    filter: brightness(80%);
+  }
+}
+
+@-o-keyframes tag {
+  0%{
+    filter: brightness(80%);
+  }
+  20%{
+    filter: brightness(150%);
+  }
+  100%{
+    filter: brightness(80%);
+  }
+}
+
+@keyframes a {}
+
+@-moz-keyframes a {}
+
+@-webkit-keyframes a {}
+
+@-o-keyframes a {}

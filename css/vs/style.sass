@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
+*
+    margin: 0
+    padding: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html
+    height: -webkit-fill-available
+
+img
+    display: block
+    width: 100%
+    height: auto
+
+$blue: #2455FF
+$yellow: #FFC700
+$red: #D11010
+$orange: #FF4D00
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+.external-box
+    position: relative
+    margin: 0 auto
+    width: 1070px
+
+.wrapper
+    +size(100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 10px 0 0 0
+    font-family: "Rubik", sans-serif
+    .top-container
+        position: relative
+        +size(894px,279.38px)
+        background: url("../../images/vs/bn.webp") top center no-repeat
+        background-size: contain
+        text-align: center
+        h1
+            font-size: 4rem
+            font-weight: 700
+            color: $red
+            text-shadow: 0 5px 0 $yellow
+            margin-top: 165px
+    .fishIcon
+        position: absolute
+        right: 11%
+        bottom: 4%
+
+    .bottom-container
+        position: relative
+        +size(550px,90px)
+        background-color: #fff
+        margin-top: -12px
+        border-radius: 100vmax
+        border: 3px solid #666666
+        .container
+            position: relative
+            +size(100%,100%)
+            display: grid
+            grid-template-columns: 1fr 1fr
+            justify-content: space-around
+            .box
+                display: flex
+                flex-direction: column
+                justify-content: center
+                .logo
+                    +size(140px,auto)
+                    position: absolute
+                    top: -28px
+                    filter: drop-shadow(0 0 5px rgba(#000,0.3))
+                    img
+                        animation: titleScale 2.5s infinite alternate ease
+                    &::after
+                        content: ""
+                        position: absolute
+                        top: 0
+                        left: 0
+                        +size(100%)
+                        background: url('../../images/frame/light.png') top center no-repeat
+                        background-size: cover
+                        mask-position: center
+                        mask-size: cover
+                        animation: flash 2s infinite linear
+                        mix-blend-mode: overlay
+                        @keyframes flash
+                            0%
+                                background-position: -100px 0px
+
+                            66%
+                                background-position: 200px 0px
+
+                            100%
+                                background-position: 500px 0
+
+                        @keyframes titleScale
+                            0%
+                                transform: scale(1)
+                            5%
+                                transform: scale(1.1)
+                            10%
+                                transform: scale(1)
+                            100%
+                                transform: scale(1)
+
+                h1
+                    text-align: center
+                    font-size: 1.8rem
+                    font-weight: bold
+
+            .teamA
+                grid-column: 1
+                .logo
+                    left: 12%
+                    &::after
+                        mask-image: url('../../images/vs/ct.png')
+                h1
+                    color: $orange
+            .teamB
+                grid-column: 2
+                .logo
+                    right: 12%
+                    &::after
+                        mask-image: url('../../images/vs/jp.png')
+                h1
+                    color: $blue
+
+        .vs-bar
+            position: absolute
+            bottom: -5%
+            height: 25px
+            width: 100%
+            background-color: $blue
+            border-radius: 100vmax
+            border: 3px solid #666666
+            .per-container
+                position: relative
+                min-width: 15%
+                max-width: 85%
+                width: 50%
+                height: 100%
+                background-color: $yellow
+                border-radius: 100vmax
+                animation: progress 1.5s forwards ease
+                @keyframes progress
+                    0%
+                        width: 0
+                        opacity: 0
+                    20%
+                        opacity: 1
+                    100%
+                        opacity: 1
+
+                .vs-mark
+                    position: absolute
+                    display: block
+                    +size(35px)
+                    right: -16px
+                    bottom: 5%
+                    animation: scaleVs 2s infinite
+                    z-index: 5
+                    @keyframes scaleVs
+                        50%
+                            filter: brightness(150%)
+                            transform: scale(1.15)
+            .num-p
+                position: absolute
+                display: inline-flex
+                align-items: center
+                top: 0
+                span
+                    display: block
+                    +size(16px)
+                    filter: drop-shadow(0 0 1px #000000)
+                strong
+                    display: block
+                    color: #fff
+                    line-height: 1.2
+                    text-shadow: 0 0 2px #000
+                &.aTeam-num
+                    left: 1%
+                &.bTeam-num
+                    right: 1%
+                    flex-direction: row-reverse
+        &.a-mode
+            .container
+                .teamA
+                    grid-column: 2
+                    grid-row: 1
+                    .logo
+                        left: initial
+                        right: 12%
+                .teamB
+                    grid-row: 1
+                    grid-column: 1
+                    .logo
+                        left: 12%
+                        right: initial
+            .vs-bar
+                background-color: $yellow
+                .per-container
+                    background-color: $blue
+                .num-p
+                    &.aTeam-num
+                        left: initial
+                        right: 1%
+                        flex-direction: row-reverse
+                    &.bTeam-num
+                        right: initial
+                        left: 1%
+                        flex-direction: row
+.btn
+    position: absolute
+    left: 10%
+    bottom: 5%
+    button
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        background-color: #000
+        color: #9d9d9d
+        padding: 1rem 1.2rem 0.9rem 1.2rem
+        border: 2px solid #9d9d9d
+        border-radius: 15px
+        font-size: 1rem
+        cursor: pointer
+        transition: all 0.3s
+        span
+            display: block
+            width: 15px
+            margin-right: 10px
+        &:active
+            background-color: #2e2e2e
+            transform: translateY(2px)
+        &:hover
+            border-color: #3ee9a5
+            color: #3ee9a5
+            transition: all 0.3s
+.event-desc
+    width: 100%
+    height: 100%
+    display: none
+    position: fixed
+    place-content: center
+    inset: 0px
+    background-color: rgba(#000,0)
+    backdrop-filter: blur(3px)
+    z-index: 10
+    font-family: "Rubik", sans-serif
+
+    .block
+        max-width: 750px
+        +size(calc(100vw - 100px),calc(100vh - 180px))
+        background-color: #000
+        border: 4px solid #3ee9a5
+        border-radius: 15px
+        .content
+            +size(100%)
+            color: #fff
+            -webkit-overflow-scrolling: touch
+            overflow-x: hidden
+            overflow-y: scroll
+            padding: 3.5%
+
+            &::-webkit-scrollbar
+                width: 6px
+                height: 6px
+
+            &::-webkit-scrollbar-track
+                margin: 5px 0
+
+            &::-webkit-scrollbar-thumb
+                background: rgba(#fff,0.5)
+                border-radius: 10px
+
+        .value-area
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 15px
+
+        .value-area >   div
+            display: flex
+            align-items: center
+            justify-content: space-between
+            border: 2px solid #9d9d9d
+            border-radius: 15px
+            padding: 1.2rem 0.75rem
+
+            p
+                font-size: 1rem
+
+            p.g-number
+                color: #3ee9a5
+                font-size: 1.5rem
+                line-height: 0.8
+
+            &.es-bonus .right-side
+                text-align: right
+                span
+                    font-size: 0.8rem
+                    color: yellow
+
+            &.contribution
+                width: 100%
+                display: grid
+                justify-content: space-between
+                grid-template-areas: "label p " "progress progress"
+                row-gap: 5px
+                label
+                    grid-area: label
+                p
+                    grid-area: p
+                progress
+                    position: relative
+                    grid-area: progress
+                    width: 100%
+                    -webkit-appearance: none
+                    -moz-appearance: none
+                    border-radius: 20px
+                    border: 2px solid #666666
+                    overflow: hidden
+                    height: 12px
+                    &::-webkit-progress-value
+                        background-color: #3ee9a5
+
+                    &::-moz-progress-value
+                        background-color: #3ee9a5
+
+                    &::-webkit-progress-bar
+                        background-color: #343333
+
+                    &::-moz-progress-bar
+                        background-color: #343333
+
+        button.win_awards
+            font-size: 1.5rem
+            font-weight: bold
+            background-color: #3ee9a5
+            cursor: pointer
+            border-radius: 15px
+            border: 0
+            transition: filter .3s
+            &:hover
+                filter: brightness(120%)
+                transition: filter .3s
+            &:disabled
+                color: #343333
+                background-color: #666666
+                border: solid 6px #333
+                cursor: initial
+                &:hover
+                    filter: brightness(100%)
+
+        .all-list
+            display: grid
+            grid-template-columns: 1fr
+            row-gap: 20px
+            &::before
+                content: ""
+                display: block
+                +size(100%,2px)
+                background-color: #3ee9a5
+                margin: 25px 0 10px 0
+            .event-details,.announcement
+                p
+                    color: #3ee9a5
+                    margin-bottom: 5px
+                ul
+                    list-style: disc
+                    padding-left: 40px
+                    ol
+                        list-style: decimal
+                        padding-left: 20px
+                    li
+                        line-height: 1.8
+                        font-size: .9rem
+                        span
+                            color: #3ee9a5
+                        &::marker
+                            font-size: 12px
+                            color: #3ee9a5
+
+    .close-btn
+        +size(50px)
+        font-size: 2rem
+        color: #3ee9a5
+        text-align: center
+        padding-top: 5px
+        margin: 0 auto
+        margin-top: 10px
+        border: 3px solid #3ee9a5
+        border-radius: 50%
+        cursor: pointer
+        &:hover
+            color: rgba(#3ee9a5,0.8)
+            border-color: rgba(#3ee9a5,0.8)
+            transition: all 0.3s
+
+@media screen and ( max-width: 1170px )
+    .external-box
+        width: 100%
+    .wrapper
+        .fishIcon
+            right: initial
+            left: 72%
+    .btn
+        left: 50%
+        transform: translateX(-425px)
+@media screen and ( max-width: 900px )
+    .wrapper
+        .top-container
+            min-width: 600px
+            width: 100vw
+            height: 30vw
+            h1
+                font-size: 3.5rem
+                margin-top: 18%
+        .fishIcon
+            width: 180px
+            bottom: 34%
+        .bottom-container
+            margin-top: 20px
+            margin-bottom: 20px
+    .btn
+        position: static
+        transform: none
+        width: 100%
+        padding: 0 5% 0% 5%
+        button
+            width: 100%
+
+@media screen and ( max-width: 767px )
+    .wrapper
+        .top-container
+            min-width: initial
+            h1
+                font-size: 3rem
+                margin-top: 17.2%
+        .fishIcon
+            display: none
+        .bottom-container
+            +size(100%,80px)
+            margin-top: 5%
+            margin-bottom: 0
+            .container
+                .box
+                    .logo
+                        width: 120px
+                    h1
+                        font-size: 1.5rem
+
+    .btn
+        margin: 15px 0 10px 0
+        button
+            padding: 10px
+    .event-desc
+        .block
+            height: 83vh
+            .value-area >   div
+                flex-direction: column
+                justify-content: space-evenly
+                p.g-number
+                    margin-top: 10px
+                &.es-bonus .right-side
+                    text-align: center
+        .close-btn
+            +size(40px)
+            font-size: 1.5rem
+@media screen and ( max-width: 500px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 2rem
+        .bottom-container
+            .container
+                .teamA
+                    .logo
+                        transform: translateX(-160px)
+                        left: 50%
+                .teamB
+                    .logo
+                        transform: translateX(160px)
+                        right: 50%
+            .vs-bar
+                .per-container
+                    .vs-mark
+                        +size(30px)
+            &.a-mode
+                .container
+                    .teamA
+                        .logo
+                            transform: translateX(160px)
+                            left: initial
+                            right: 50%
+                    .teamB
+                        .logo
+                            transform: translateX(-160px)
+                            right: initial
+                            left: 50%
+
+    .event-desc
+        padding-bottom: 5% //12
+        .block
+            width: calc( 100vw - 5vw )
+            height: 80dvh //77
+            .value-area
+                grid-template-rows: repeat(2,1fr)
+                grid-gap: 15px
+                margin-top: 5px
+            .value-area >   div
+                padding: .5rem
+
+                &.es-bonus .right-side
+                    span
+                        font-size: 0.6rem
+            .all-list
+                &::before
+                    margin: 25px 0 0 0
+
+@media screen and ( max-width: 375px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 1.8rem
+        .bottom-container
+            height: 75px
+            // .container
+            //     .teamA
+            //         .logo
+            //             left: 8%
+            //     .teamB
+            //         .logo
+            //             right: 8%
+
+@media screen and ( max-width: 360px )
+    .wrapper
+        .top-container
+            h1
+                font-size: 1.5rem
