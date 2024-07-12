@@ -168,7 +168,7 @@ img {
   position: relative;
   min-width: 15%;
   max-width: 85%;
-  width: 50%;
+  width: 35%;
   height: 100%;
   background-color: #FFC700;
   border-radius: 100vmax;
@@ -189,8 +189,8 @@ img {
 .wrapper .bottom-container .vs-bar .per-container .vs-mark {
   position: absolute;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 46px;
+  height: 46px;
   right: -16px;
   bottom: 5%;
   animation: scaleVs 2s infinite;
@@ -568,6 +568,9 @@ img {
   .wrapper .top-container h1 {
     font-size: 2rem;
   }
+  .wrapper .bottom-container {
+    width: 95%;
+  }
   .wrapper .bottom-container .container .teamA .logo {
     transform: translateX(-160px);
     left: 50%;
@@ -577,8 +580,8 @@ img {
     right: 50%;
   }
   .wrapper .bottom-container .vs-bar .per-container .vs-mark {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
   .wrapper .bottom-container.a-mode .container .teamA .logo {
     transform: translateX(160px);
