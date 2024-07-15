@@ -28,201 +28,201 @@ $orange: #FF4D00
     margin: 0 auto
     width: 1070px
 
-.wrapper
-    +size(100%)
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    padding: 10px 0 0 0
-    font-family: "Rubik", sans-serif
-    .top-container
-        position: relative
-        +size(894px,279.38px)
-        background: url("../../images/vs/bn.webp") top center no-repeat
-        background-size: contain
-        text-align: center
-        h1
-            font-size: 4rem
-            font-weight: 700
-            color: $red
-            text-shadow: 0 5px 0 $yellow
-            margin-top: 165px
-    .fishIcon
-        position: absolute
-        right: 11%
-        bottom: 4%
-
-    .bottom-container
-        position: relative
-        +size(550px,90px)
-        background-color: #fff
-        margin-top: -12px
-        border-radius: 100vmax
-        border: 3px solid #666666
-        .container
+    main
+        +size(100%)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 10px 0 0 0
+        font-family: "Rubik", sans-serif
+        .top-container
             position: relative
-            +size(100%,100%)
-            display: grid
-            grid-template-columns: 1fr 0.5fr 1fr
-            justify-content: space-around
-            justify-items: center
-            .box
-                display: flex
-                flex-direction: column
-                justify-content: center
-                .logo
-                    +size(140px,auto)
-                    position: absolute
-                    top: -28px
-                    filter: drop-shadow(0 0 5px rgba(#000,0.3))
-                    img
-                        animation: titleScale 2.5s infinite alternate ease
-                    &::after
-                        content: ""
-                        position: absolute
-                        top: 0
-                        left: 0
-                        +size(100%)
-                        background: url('../../images/frame/light.png') top center no-repeat
-                        background-size: cover
-                        mask-position: center
-                        mask-size: cover
-                        animation: flash 2s infinite linear
-                        mix-blend-mode: overlay
-                        @keyframes flash
-                            0%
-                                background-position: -100px 0px
-
-                            66%
-                                background-position: 200px 0px
-
-                            100%
-                                background-position: 500px 0
-
-                        @keyframes titleScale
-                            0%
-                                transform: scale(1)
-                            5%
-                                transform: scale(1.1)
-                            10%
-                                transform: scale(1)
-                            100%
-                                transform: scale(1)
-
-                h1
-                    text-align: center
-                    font-size: 1.8rem
-                    font-weight: bold
-
-            .gif
-                position: absolute
-                left: 0
-                bottom: 10px
-                grid-column: 2
-                +size(109px,auto)
-
-            .teamA
-                grid-column: 1
-                .logo
-                    left: 8%
-                    &::after
-                        mask-image: url('../../images/vs/ct.png')
-                h1
-                    color: $orange
-            .teamB
-                grid-column: 3
-                .logo
-                    right: 8%
-                    &::after
-                        mask-image: url('../../images/vs/jp.png')
-                h1
-                    color: $blue
-
-        .vs-bar
+            +size(894px,279.38px)
+            background: url("../../images/vs/bn.webp") top center no-repeat
+            background-size: contain
+            text-align: center
+            h1
+                font-size: 4rem
+                font-weight: 700
+                color: $red
+                text-shadow: 0 5px 0 $yellow
+                margin-top: 165px
+        .fishIcon
             position: absolute
-            bottom: -5%
-            height: 25px
-            width: 100%
-            background-color: $blue
+            right: 11%
+            bottom: 4%
+
+        .bottom-container
+            position: relative
+            +size(550px,90px)
+            background-color: #fff
+            margin-top: -12px
             border-radius: 100vmax
             border: 3px solid #666666
-            .per-container
-                position: relative
-                min-width: 15%
-                max-width: 85%
-                width: 35%
-                height: 100%
-                background-color: $yellow
-                border-radius: 100vmax
-                animation: progress 1.5s forwards ease
-                @keyframes progress
-                    0%
-                        width: 0
-                        opacity: 0
-                    20%
-                        opacity: 1
-                    100%
-                        opacity: 1
-
-                .vs-mark
-                    position: absolute
-                    display: block
-                    +size(46px)
-                    right: -16px
-                    bottom: 5%
-                    animation: scaleVs 2s infinite
-                    z-index: 5
-                    @keyframes scaleVs
-                        50%
-                            filter: brightness(150%)
-                            transform: scale(1.15)
-            .num-p
-                position: absolute
-                display: inline-flex
-                align-items: center
-                top: 0
-                span
-                    display: block
-                    +size(16px)
-                    filter: drop-shadow(0 0 1px #000000)
-                strong
-                    display: block
-                    color: #fff
-                    line-height: 1.2
-                    text-shadow: 0 0 2px #000
-                &.aTeam-num
-                    left: 2%
-                &.bTeam-num
-                    right: 2%
-                    flex-direction: row-reverse
-        &.a-mode
             .container
-                .teamA
-                    grid-column: 3
-                    grid-row: 1
+                position: relative
+                +size(100%,100%)
+                display: grid
+                grid-template-columns: 1fr 0.5fr 1fr
+                justify-content: space-around
+                justify-items: center
+                .box
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
                     .logo
-                        left: initial
-                        right: 8%
-                .teamB
-                    grid-row: 1
+                        +size(140px,auto)
+                        position: absolute
+                        top: -28px
+                        filter: drop-shadow(0 0 5px rgba(#000,0.3))
+                        img
+                            animation: titleScale 2.5s infinite alternate ease
+                        &::after
+                            content: ""
+                            position: absolute
+                            top: 0
+                            left: 0
+                            +size(100%)
+                            background: url('../../images/frame/light.png') top center no-repeat
+                            background-size: cover
+                            mask-position: center
+                            mask-size: cover
+                            animation: flash 2s infinite linear
+                            mix-blend-mode: overlay
+                            @keyframes flash
+                                0%
+                                    background-position: -100px 0px
+
+                                66%
+                                    background-position: 200px 0px
+
+                                100%
+                                    background-position: 500px 0
+
+                            @keyframes titleScale
+                                0%
+                                    transform: scale(1)
+                                5%
+                                    transform: scale(1.1)
+                                10%
+                                    transform: scale(1)
+                                100%
+                                    transform: scale(1)
+
+                    h1
+                        text-align: center
+                        font-size: 1.8rem
+                        font-weight: bold
+
+                .gif
+                    position: absolute
+                    left: 0
+                    bottom: 10px
+                    grid-column: 2
+                    +size(109px,auto)
+
+                .teamA
                     grid-column: 1
                     .logo
                         left: 8%
-                        right: initial
+                        &::after
+                            mask-image: url('../../images/vs/ct.png')
+                    h1
+                        color: $orange
+                .teamB
+                    grid-column: 3
+                    .logo
+                        right: 8%
+                        &::after
+                            mask-image: url('../../images/vs/jp.png')
+                    h1
+                        color: $blue
+
             .vs-bar
-                background-color: $yellow
+                position: absolute
+                bottom: -5%
+                height: 25px
+                width: 100%
+                background-color: $blue
+                border-radius: 100vmax
+                border: 3px solid #666666
                 .per-container
-                    background-color: $blue
+                    position: relative
+                    min-width: 15%
+                    max-width: 85%
+                    width: 35%
+                    height: 100%
+                    background-color: $yellow
+                    border-radius: 100vmax
+                    animation: progress 1.5s forwards ease
+                    @keyframes progress
+                        0%
+                            width: 0
+                            opacity: 0
+                        20%
+                            opacity: 1
+                        100%
+                            opacity: 1
+
+                    .vs-mark
+                        position: absolute
+                        display: block
+                        +size(46px)
+                        right: -16px
+                        bottom: 5%
+                        animation: scaleVs 2s infinite
+                        z-index: 5
+                        @keyframes scaleVs
+                            50%
+                                filter: brightness(150%)
+                                transform: scale(1.15)
                 .num-p
+                    position: absolute
+                    display: inline-flex
+                    align-items: center
+                    top: 0
+                    span
+                        display: block
+                        +size(16px)
+                        filter: drop-shadow(0 0 1px #000000)
+                    strong
+                        display: block
+                        color: #fff
+                        line-height: 1.2
+                        text-shadow: 0 0 2px #000
                     &.aTeam-num
-                        left: initial
+                        left: 2%
+                    &.bTeam-num
                         right: 2%
                         flex-direction: row-reverse
-                    &.bTeam-num
-                        right: initial
-                        left: 2%
-                        flex-direction: row
+            &.a-mode
+                .container
+                    .teamA
+                        grid-column: 3
+                        grid-row: 1
+                        .logo
+                            left: initial
+                            right: 8%
+                    .teamB
+                        grid-row: 1
+                        grid-column: 1
+                        .logo
+                            left: 8%
+                            right: initial
+                .vs-bar
+                    background-color: $yellow
+                    .per-container
+                        background-color: $blue
+                    .num-p
+                        &.aTeam-num
+                            left: initial
+                            right: 2%
+                            flex-direction: row-reverse
+                        &.bTeam-num
+                            right: initial
+                            left: 2%
+                            flex-direction: row
 .btn
     position: absolute
     left: 10%
@@ -289,7 +289,7 @@ $orange: #FF4D00
 
         .value-area
             display: grid
-            grid-template-columns: repeat(2,1fr)
+            grid-template-areas: "bets bonus" "contri contri"
             grid-gap: 15px
 
         .value-area >   div
@@ -299,6 +299,13 @@ $orange: #FF4D00
             border: 2px solid #9d9d9d
             border-radius: 15px
             padding: 1.2rem 0.75rem
+
+            &.bet
+                grid-area: bets
+            &.es-bonus
+                grid-area: bonus
+            &.contribution
+                grid-area: contri
 
             p
                 font-size: 1rem
@@ -413,28 +420,29 @@ $orange: #FF4D00
 @media screen and ( max-width: 1170px )
     .external-box
         width: 100%
-    .wrapper
-        .fishIcon
-            right: initial
-            left: 72%
+        main
+            .fishIcon
+                right: initial
+                left: 72%
     .btn
         left: 50%
         transform: translateX(-425px)
 @media screen and ( max-width: 900px )
-    .wrapper
-        .top-container
-            min-width: 600px
-            width: 100vw
-            height: 30vw
-            h1
-                font-size: 3.5rem
-                margin-top: 18%
-        .fishIcon
-            width: 180px
-            bottom: 34%
-        .bottom-container
-            margin-top: 20px
-            margin-bottom: 20px
+    .external-box
+        main
+            .top-container
+                min-width: 600px
+                width: 100vw
+                height: 30vw
+                h1
+                    font-size: 3.5rem
+                    margin-top: 18%
+            .fishIcon
+                width: 180px
+                bottom: 34%
+            .bottom-container
+                margin-top: 20px
+                margin-bottom: 20px
     .btn
         position: static
         transform: none
@@ -444,24 +452,25 @@ $orange: #FF4D00
             width: 100%
 
 @media screen and ( max-width: 767px )
-    .wrapper
-        .top-container
-            min-width: initial
-            h1
-                font-size: 2.8rem
-                margin-top: 17.2%
-        .fishIcon
-            display: none
-        .bottom-container
-            +size(95%,80px)
-            margin-top: 2%
-            margin-bottom: 0
-            .container
-                .box
-                    .logo
-                        width: 120px
-                    h1
-                        font-size: 1.4rem
+    .external-box
+        main
+            .top-container
+                min-width: initial
+                h1
+                    font-size: 2.8rem
+                    margin-top: 17.2%
+            .fishIcon
+                display: none
+            .bottom-container
+                +size(95%,80px)
+                margin-top: 2%
+                margin-bottom: 0
+                .container
+                    .box
+                        .logo
+                            width: 120px
+                        h1
+                            font-size: 1.4rem
 
     .btn
         margin: 15px 0 10px 0
@@ -482,42 +491,43 @@ $orange: #FF4D00
             font-size: 1.5rem
 
 @media screen and ( max-width: 499px )
-    .wrapper
-        .top-container
-            h1
-                font-size: 2rem
-        .bottom-container
-            .container
-                .box
-                    .logo
-                        top: -22px
-                    &.teamA
-                        .logo
-                            transform: translateX(-160px)
-                            left: 50%
-                    &.teamB
-                        .logo
-                            transform: translateX(160px)
-                            right: 50%
-                .gif
-                    width: 75px
-
-            .vs-bar
-                .per-container
-                    .vs-mark
-                        +size(32px)
-            &.a-mode
+    .external-box
+        main
+            .top-container
+                h1
+                    font-size: 2rem
+            .bottom-container
                 .container
-                    .teamA
+                    .box
                         .logo
-                            transform: translateX(160px)
-                            left: initial
-                            right: 50%
-                    .teamB
-                        .logo
-                            transform: translateX(-160px)
-                            right: initial
-                            left: 50%
+                            top: -22px
+                        &.teamA
+                            .logo
+                                transform: translateX(-160px)
+                                left: 50%
+                        &.teamB
+                            .logo
+                                transform: translateX(160px)
+                                right: 50%
+                    .gif
+                        width: 75px
+
+                .vs-bar
+                    .per-container
+                        .vs-mark
+                            +size(32px)
+                &.a-mode
+                    .container
+                        .teamA
+                            .logo
+                                transform: translateX(160px)
+                                left: initial
+                                right: 50%
+                        .teamB
+                            .logo
+                                transform: translateX(-160px)
+                                right: initial
+                                left: 50%
 
     .event-desc
         padding-bottom: 5% //12
@@ -539,18 +549,20 @@ $orange: #FF4D00
                     margin: 25px 0 0 0
 
 @media screen and ( max-width: 375px )
-    .wrapper
-        .top-container
-            h1
-                font-size: 1.8rem
-        .bottom-container
-            height: 75px
-            .container
-                .box
-                    h1
-                        font-size: 1.2rem
+    .external-box
+        main
+            .top-container
+                h1
+                    font-size: 1.8rem
+            .bottom-container
+                height: 75px
+                .container
+                    .box
+                        h1
+                            font-size: 1.2rem
 @media screen and ( max-width: 360px )
-    .wrapper
-        .top-container
-            h1
-                font-size: 1.5rem
+    .external-box
+        main
+            .top-container
+                h1
+                    font-size: 1.5rem

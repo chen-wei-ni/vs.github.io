@@ -20,8 +20,7 @@ img {
   margin: 0 auto;
   width: 1070px;
 }
-
-.wrapper {
+.external-box main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,7 +30,7 @@ img {
   padding: 10px 0 0 0;
   font-family: "Rubik", sans-serif;
 }
-.wrapper .top-container {
+.external-box main .top-container {
   position: relative;
   width: 894px;
   height: 279.38px;
@@ -39,19 +38,19 @@ img {
   background-size: contain;
   text-align: center;
 }
-.wrapper .top-container h1 {
+.external-box main .top-container h1 {
   font-size: 4rem;
   font-weight: 700;
   color: #D11010;
   text-shadow: 0 5px 0 #FFC700;
   margin-top: 165px;
 }
-.wrapper .fishIcon {
+.external-box main .fishIcon {
   position: absolute;
   right: 11%;
   bottom: 4%;
 }
-.wrapper .bottom-container {
+.external-box main .bottom-container {
   position: relative;
   width: 550px;
   height: 90px;
@@ -60,7 +59,7 @@ img {
   border-radius: 100vmax;
   border: 3px solid #666666;
 }
-.wrapper .bottom-container .container {
+.external-box main .bottom-container .container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -69,22 +68,22 @@ img {
   justify-content: space-around;
   justify-items: center;
 }
-.wrapper .bottom-container .container .box {
+.external-box main .bottom-container .container .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.wrapper .bottom-container .container .box .logo {
+.external-box main .bottom-container .container .box .logo {
   width: 140px;
   height: auto;
   position: absolute;
   top: -28px;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
-.wrapper .bottom-container .container .box .logo img {
+.external-box main .bottom-container .container .box .logo img {
   animation: titleScale 2.5s infinite alternate ease;
 }
-.wrapper .bottom-container .container .box .logo::after {
+.external-box main .bottom-container .container .box .logo::after {
   content: "";
   position: absolute;
   top: 0;
@@ -125,12 +124,12 @@ img {
     transform: scale(1);
   }
 }
-.wrapper .bottom-container .container .box h1 {
+.external-box main .bottom-container .container .box h1 {
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
 }
-.wrapper .bottom-container .container .gif {
+.external-box main .bottom-container .container .gif {
   position: absolute;
   left: 0;
   bottom: 10px;
@@ -138,33 +137,33 @@ img {
   width: 109px;
   height: auto;
 }
-.wrapper .bottom-container .container .teamA {
+.external-box main .bottom-container .container .teamA {
   grid-column: 1;
 }
-.wrapper .bottom-container .container .teamA .logo {
+.external-box main .bottom-container .container .teamA .logo {
   left: 8%;
 }
-.wrapper .bottom-container .container .teamA .logo::after {
+.external-box main .bottom-container .container .teamA .logo::after {
   -webkit-mask-image: url("../../images/vs/ct.png");
           mask-image: url("../../images/vs/ct.png");
 }
-.wrapper .bottom-container .container .teamA h1 {
+.external-box main .bottom-container .container .teamA h1 {
   color: #FF4D00;
 }
-.wrapper .bottom-container .container .teamB {
+.external-box main .bottom-container .container .teamB {
   grid-column: 3;
 }
-.wrapper .bottom-container .container .teamB .logo {
+.external-box main .bottom-container .container .teamB .logo {
   right: 8%;
 }
-.wrapper .bottom-container .container .teamB .logo::after {
+.external-box main .bottom-container .container .teamB .logo::after {
   -webkit-mask-image: url("../../images/vs/jp.png");
           mask-image: url("../../images/vs/jp.png");
 }
-.wrapper .bottom-container .container .teamB h1 {
+.external-box main .bottom-container .container .teamB h1 {
   color: #2455FF;
 }
-.wrapper .bottom-container .vs-bar {
+.external-box main .bottom-container .vs-bar {
   position: absolute;
   bottom: -5%;
   height: 25px;
@@ -173,7 +172,7 @@ img {
   border-radius: 100vmax;
   border: 3px solid #666666;
 }
-.wrapper .bottom-container .vs-bar .per-container {
+.external-box main .bottom-container .vs-bar .per-container {
   position: relative;
   min-width: 15%;
   max-width: 85%;
@@ -195,7 +194,7 @@ img {
     opacity: 1;
   }
 }
-.wrapper .bottom-container .vs-bar .per-container .vs-mark {
+.external-box main .bottom-container .vs-bar .per-container .vs-mark {
   position: absolute;
   display: block;
   width: 46px;
@@ -211,59 +210,59 @@ img {
     transform: scale(1.15);
   }
 }
-.wrapper .bottom-container .vs-bar .num-p {
+.external-box main .bottom-container .vs-bar .num-p {
   position: absolute;
   display: inline-flex;
   align-items: center;
   top: 0;
 }
-.wrapper .bottom-container .vs-bar .num-p span {
+.external-box main .bottom-container .vs-bar .num-p span {
   display: block;
   width: 16px;
   height: 16px;
   filter: drop-shadow(0 0 1px #000000);
 }
-.wrapper .bottom-container .vs-bar .num-p strong {
+.external-box main .bottom-container .vs-bar .num-p strong {
   display: block;
   color: #fff;
   line-height: 1.2;
   text-shadow: 0 0 2px #000;
 }
-.wrapper .bottom-container .vs-bar .num-p.aTeam-num {
+.external-box main .bottom-container .vs-bar .num-p.aTeam-num {
   left: 2%;
 }
-.wrapper .bottom-container .vs-bar .num-p.bTeam-num {
+.external-box main .bottom-container .vs-bar .num-p.bTeam-num {
   right: 2%;
   flex-direction: row-reverse;
 }
-.wrapper .bottom-container.a-mode .container .teamA {
+.external-box main .bottom-container.a-mode .container .teamA {
   grid-column: 3;
   grid-row: 1;
 }
-.wrapper .bottom-container.a-mode .container .teamA .logo {
+.external-box main .bottom-container.a-mode .container .teamA .logo {
   left: initial;
   right: 8%;
 }
-.wrapper .bottom-container.a-mode .container .teamB {
+.external-box main .bottom-container.a-mode .container .teamB {
   grid-row: 1;
   grid-column: 1;
 }
-.wrapper .bottom-container.a-mode .container .teamB .logo {
+.external-box main .bottom-container.a-mode .container .teamB .logo {
   left: 8%;
   right: initial;
 }
-.wrapper .bottom-container.a-mode .vs-bar {
+.external-box main .bottom-container.a-mode .vs-bar {
   background-color: #FFC700;
 }
-.wrapper .bottom-container.a-mode .vs-bar .per-container {
+.external-box main .bottom-container.a-mode .vs-bar .per-container {
   background-color: #2455FF;
 }
-.wrapper .bottom-container.a-mode .vs-bar .num-p.aTeam-num {
+.external-box main .bottom-container.a-mode .vs-bar .num-p.aTeam-num {
   left: initial;
   right: 2%;
   flex-direction: row-reverse;
 }
-.wrapper .bottom-container.a-mode .vs-bar .num-p.bTeam-num {
+.external-box main .bottom-container.a-mode .vs-bar .num-p.bTeam-num {
   right: initial;
   left: 2%;
   flex-direction: row;
@@ -345,7 +344,7 @@ img {
 }
 .event-desc .block .value-area {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "bets bonus" "contri contri";
   grid-gap: 15px;
 }
 .event-desc .block .value-area > div {
@@ -355,6 +354,15 @@ img {
   border: 2px solid #9d9d9d;
   border-radius: 15px;
   padding: 1.2rem 0.75rem;
+}
+.event-desc .block .value-area > div.bet {
+  grid-area: bets;
+}
+.event-desc .block .value-area > div.es-bonus {
+  grid-area: bonus;
+}
+.event-desc .block .value-area > div.contribution {
+  grid-area: contri;
 }
 .event-desc .block .value-area > div p {
   font-size: 1rem;
@@ -488,7 +496,7 @@ img {
   .external-box {
     width: 100%;
   }
-  .wrapper .fishIcon {
+  .external-box main .fishIcon {
     right: initial;
     left: 72%;
   }
@@ -498,20 +506,20 @@ img {
   }
 }
 @media screen and (max-width: 900px) {
-  .wrapper .top-container {
+  .external-box main .top-container {
     min-width: 600px;
     width: 100vw;
     height: 30vw;
   }
-  .wrapper .top-container h1 {
+  .external-box main .top-container h1 {
     font-size: 3.5rem;
     margin-top: 18%;
   }
-  .wrapper .fishIcon {
+  .external-box main .fishIcon {
     width: 180px;
     bottom: 34%;
   }
-  .wrapper .bottom-container {
+  .external-box main .bottom-container {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -526,26 +534,26 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
-  .wrapper .top-container {
+  .external-box main .top-container {
     min-width: initial;
   }
-  .wrapper .top-container h1 {
+  .external-box main .top-container h1 {
     font-size: 2.8rem;
     margin-top: 17.2%;
   }
-  .wrapper .fishIcon {
+  .external-box main .fishIcon {
     display: none;
   }
-  .wrapper .bottom-container {
+  .external-box main .bottom-container {
     width: 95%;
     height: 80px;
     margin-top: 2%;
     margin-bottom: 0;
   }
-  .wrapper .bottom-container .container .box .logo {
+  .external-box main .bottom-container .container .box .logo {
     width: 120px;
   }
-  .wrapper .bottom-container .container .box h1 {
+  .external-box main .bottom-container .container .box h1 {
     font-size: 1.4rem;
   }
   .btn {
@@ -574,33 +582,33 @@ img {
   }
 }
 @media screen and (max-width: 499px) {
-  .wrapper .top-container h1 {
+  .external-box main .top-container h1 {
     font-size: 2rem;
   }
-  .wrapper .bottom-container .container .box .logo {
+  .external-box main .bottom-container .container .box .logo {
     top: -22px;
   }
-  .wrapper .bottom-container .container .box.teamA .logo {
+  .external-box main .bottom-container .container .box.teamA .logo {
     transform: translateX(-160px);
     left: 50%;
   }
-  .wrapper .bottom-container .container .box.teamB .logo {
+  .external-box main .bottom-container .container .box.teamB .logo {
     transform: translateX(160px);
     right: 50%;
   }
-  .wrapper .bottom-container .container .gif {
+  .external-box main .bottom-container .container .gif {
     width: 75px;
   }
-  .wrapper .bottom-container .vs-bar .per-container .vs-mark {
+  .external-box main .bottom-container .vs-bar .per-container .vs-mark {
     width: 32px;
     height: 32px;
   }
-  .wrapper .bottom-container.a-mode .container .teamA .logo {
+  .external-box main .bottom-container.a-mode .container .teamA .logo {
     transform: translateX(160px);
     left: initial;
     right: 50%;
   }
-  .wrapper .bottom-container.a-mode .container .teamB .logo {
+  .external-box main .bottom-container.a-mode .container .teamB .logo {
     transform: translateX(-160px);
     right: initial;
     left: 50%;
@@ -628,18 +636,18 @@ img {
   }
 }
 @media screen and (max-width: 375px) {
-  .wrapper .top-container h1 {
+  .external-box main .top-container h1 {
     font-size: 1.8rem;
   }
-  .wrapper .bottom-container {
+  .external-box main .bottom-container {
     height: 75px;
   }
-  .wrapper .bottom-container .container .box h1 {
+  .external-box main .bottom-container .container .box h1 {
     font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .wrapper .top-container h1 {
+  .external-box main .top-container h1 {
     font-size: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
