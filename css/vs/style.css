@@ -138,6 +138,7 @@ img {
   background: url("../../images/vs/lightning.png") center no-repeat;
   background-size: contain;
   vertical-align: middle;
+  filter: drop-shadow(0 0 1px black);
 }
 .external-box main .bottom-container .container .teamA {
   grid-column: 1;
