@@ -60,13 +60,15 @@ $orange: #FF4D00
             margin-top: -12px
             border-radius: 100vmax
             border: 3px solid #666666
+
             .container
                 position: relative
                 +size(100%,100%)
                 display: grid
-                grid-template-columns: 1fr 0.5fr 1fr
+                grid-template-columns: 1fr 1fr
                 justify-content: space-around
                 justify-items: center
+                gap: 20px
                 .box
                     display: flex
                     flex-direction: column
@@ -114,13 +116,13 @@ $orange: #FF4D00
                         text-align: center
                         font-size: 1.8rem
                         font-weight: bold
-
-                .gif
-                    position: absolute
-                    left: 0
-                    bottom: 10px
-                    grid-column: 2
-                    +size(109px,auto)
+                        &::before
+                            content: ""
+                            display: inline-block
+                            +size(35px)
+                            background: url("../../images/vs/lightning.png") center no-repeat
+                            background-size: contain
+                            vertical-align: middle
 
                 .teamA
                     grid-column: 1
@@ -131,7 +133,7 @@ $orange: #FF4D00
                     h1
                         color: $orange
                 .teamB
-                    grid-column: 3
+                    grid-column: 2
                     .logo
                         right: 8%
                         &::after
@@ -199,7 +201,7 @@ $orange: #FF4D00
             &.a-mode
                 .container
                     .teamA
-                        grid-column: 3
+                        grid-column: 2
                         grid-row: 1
                         .logo
                             left: initial
@@ -501,6 +503,9 @@ $orange: #FF4D00
                     .box
                         .logo
                             top: -22px
+                        h1
+                            &::before
+                                +size(30px)
                         &.teamA
                             .logo
                                 transform: translateX(-160px)
@@ -509,8 +514,6 @@ $orange: #FF4D00
                             .logo
                                 transform: translateX(160px)
                                 right: 50%
-                    .gif
-                        width: 75px
 
                 .vs-bar
                     .per-container
@@ -566,3 +569,7 @@ $orange: #FF4D00
             .top-container
                 h1
                     font-size: 1.5rem
+            .bottom-container .container .box
+                h1
+                    &::before
+                        +size(25px)
