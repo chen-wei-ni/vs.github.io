@@ -67,7 +67,7 @@ img {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   justify-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 .external-box main .bottom-container .container .box {
   display: flex;
