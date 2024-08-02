@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -67,7 +68,41 @@ img {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   justify-items: center;
-  gap: 5px;
+  gap: 20px;
+}
+.external-box main .bottom-container .container .timer {
+  position: absolute;
+  top: -15px;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  animation: containerShowUp 1s linear both;
+  animation-delay: 0.2s;
+}
+@keyframes containerShowUp {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 150px;
+  }
+}
+.external-box main .bottom-container .container .timer #countdown {
+  width: 100%;
+  height: 100%;
+  color: #161616;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem 0.1rem;
+  background: #fff;
+  border: 3px solid #666666;
+  border-radius: 999px;
+  font-family: Roboto, "儷黑 Pro", 微软雅黑, 黑体, "LiHei Pro Medium", "Microsoft YaHei", SimHei, sans-serif;
+}
+.external-box main .bottom-container .container .timer #countdown span {
+  color: #D11010;
 }
 .external-box main .bottom-container .container .box {
   display: flex;
@@ -129,6 +164,7 @@ img {
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
+  transition: transform 0.5s ease-in-out;
 }
 .external-box main .bottom-container .container .box h1::before {
   content: "";
@@ -200,8 +236,8 @@ img {
 .external-box main .bottom-container .vs-bar .per-container .vs-mark {
   position: absolute;
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   right: -16px;
   bottom: 5%;
   animation: scaleVs 2s infinite;
@@ -588,6 +624,23 @@ img {
   .external-box main .top-container h1 {
     font-size: 2rem;
   }
+  .external-box main .bottom-container .container .timer {
+    width: 100%;
+    top: 124%;
+    animation: none;
+  }
+  .external-box main .bottom-container .container .timer #countdown {
+    color: #3ee9a5;
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 8px;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+  }
+  .external-box main .bottom-container .container .timer #countdown span {
+    color: #fff;
+  }
   .external-box main .bottom-container .container .box .logo {
     top: -22px;
   }
@@ -616,6 +669,9 @@ img {
     transform: translateX(-160px);
     right: initial;
     left: 50%;
+  }
+  .btn {
+    margin-top: 54px;
   }
   .event-desc {
     padding-bottom: 5%;

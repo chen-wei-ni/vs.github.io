@@ -60,7 +60,6 @@ $orange: #FF4D00
             margin-top: -12px
             border-radius: 100vmax
             border: 3px solid #666666
-
             .container
                 position: relative
                 +size(100%,100%)
@@ -68,7 +67,37 @@ $orange: #FF4D00
                 grid-template-columns: 1fr 1fr
                 justify-content: space-around
                 justify-items: center
-                gap: 5px
+                gap: 20px
+                .timer
+                    position: absolute
+                    top: -15px
+                    text-align: center
+                    width: 150px
+                    height: 30px
+                    animation: containerShowUp 1s linear both
+                    animation-delay: .2s
+
+                    @keyframes containerShowUp
+                        0%
+                            opacity: 0
+                            width: 0
+                        100%
+                            opacity: 1
+                            width: 150px
+
+                    #countdown
+                        +size(100%)
+                        color: #161616
+                        font-size: 1rem
+                        font-weight: bold
+                        padding: 0.2rem 0.1rem
+                        background: #fff
+                        border: 3px solid #666666
+                        border-radius: 999px
+                        font-family: Roboto, "儷黑 Pro", 微软雅黑, 黑体, "LiHei Pro Medium", "Microsoft YaHei", SimHei, sans-serif
+                        span
+                            color: $red
+
                 .box
                     display: flex
                     flex-direction: column
@@ -116,6 +145,7 @@ $orange: #FF4D00
                         text-align: center
                         font-size: 1.8rem
                         font-weight: bold
+                        transition: transform 0.5s ease-in-out
                         &::before
                             content: ""
                             display: inline-block
@@ -124,7 +154,6 @@ $orange: #FF4D00
                             background-size: contain
                             vertical-align: middle
                             filter: drop-shadow(0 0 1px black)
-
                 .teamA
                     grid-column: 1
                     .logo
@@ -171,7 +200,7 @@ $orange: #FF4D00
                     .vs-mark
                         position: absolute
                         display: block
-                        +size(46px)
+                        +size(40px)
                         right: -16px
                         bottom: 5%
                         animation: scaleVs 2s infinite
@@ -501,6 +530,20 @@ $orange: #FF4D00
                     font-size: 2rem
             .bottom-container
                 .container
+                    .timer
+                        width: 100%
+                        top: 124%
+                        animation: none
+                        #countdown
+                            color: #3ee9a5
+                            font-size: 1.2rem
+                            font-weight: normal
+                            letter-spacing: 8px
+                            border-radius: 0
+                            border: 0
+                            background-color: transparent
+                            span
+                                color: #fff
                     .box
                         .logo
                             top: -22px
@@ -532,6 +575,8 @@ $orange: #FF4D00
                                 transform: translateX(-160px)
                                 right: initial
                                 left: 50%
+    .btn
+        margin-top: 54px
 
     .event-desc
         padding-bottom: 5% //12
