@@ -67,14 +67,14 @@ $orange: #FF4D00
                 grid-template-columns: 1fr 1fr
                 justify-content: space-around
                 justify-items: center
-                gap: 20px
+                gap: 5px
                 .timer
                     position: absolute
                     top: -15px
                     text-align: center
                     width: 150px
                     height: 30px
-                    animation: containerShowUp 1s linear both
+                    animation: containerShowUp .5s linear both
                     animation-delay: .2s
 
                     @keyframes containerShowUp
@@ -282,7 +282,15 @@ $orange: #FF4D00
             border-color: #3ee9a5
             color: #3ee9a5
             transition: all 0.3s
-.event-desc
+    &.last-data
+        left: initial
+        right: 10%
+        bottom: 4%
+        button
+            padding: 0.85rem 1.2rem 0.8rem 1.2rem
+            span
+                width: 17px
+.modal
     width: 100%
     height: 100%
     display: none
@@ -432,7 +440,44 @@ $orange: #FF4D00
                         &::marker
                             font-size: 12px
                             color: #3ee9a5
+        &.history
+            .allDropdowns
+                .dropDown
+                    padding: 0.5rem
+                    background-color: #272727
+                    border-radius: 10px
+                    margin: 15px
+                    .history-item
+                        font-family: Roboto, "儷黑 Pro", 微软雅黑, 黑体, "LiHei Pro Medium", "Microsoft YaHei", SimHei, sans-serif
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        padding: 1rem
+                        cursor: pointer
+                        h3
+                            font-size: 1.2rem
+                            letter-spacing: 1px
+                            span
+                                margin-left: 5px
+                        i
+                            width: 15px
+                            transition: transform 0.3s
+                            &.up
+                                transform: rotate(180deg)
 
+                    .table-data
+                        padding: 1rem
+                        table
+                            +size(100%)
+                            text-align: center
+                            thead
+                                color: #000
+                                background-color: rgba(#3ee9a5,1)
+                            tr
+                                &:nth-child(even)
+                                    background-color: rgba(#000000,0.5)
+                            td,th
+                                padding: 1rem 0
     .close-btn
         +size(50px)
         font-size: 2rem
@@ -459,6 +504,9 @@ $orange: #FF4D00
     .btn
         left: 50%
         transform: translateX(-425px)
+        &.last-data
+            right: 50%
+            transform: translateX(425px)
 @media screen and ( max-width: 900px )
     .external-box
         main
@@ -475,13 +523,21 @@ $orange: #FF4D00
             .bottom-container
                 margin-top: 20px
                 margin-bottom: 20px
+    .buttons
+        display: flex
+        gap: 10px
+        padding: 0 2.5%
     .btn
         position: static
         transform: none
         width: 100%
-        padding: 0 5% 0% 5%
+        &.last-data
+            transform: none
+            button
+                padding: 9px
         button
             width: 100%
+            padding: 10px
 
 @media screen and ( max-width: 767px )
     .external-box
@@ -490,6 +546,7 @@ $orange: #FF4D00
                 min-width: initial
                 h1
                     font-size: 2.8rem
+                    text-shadow: 0 3px 0 $yellow
                     margin-top: 17.2%
             .fishIcon
                 display: none
@@ -502,13 +559,10 @@ $orange: #FF4D00
                         .logo
                             width: 120px
                         h1
-                            font-size: 1.4rem
-
-    .btn
-        margin: 15px 0 10px 0
-        button
-            padding: 10px
-    .event-desc
+                            font-size: 1.3rem
+    .buttons
+        padding: 2.5%
+    .modal
         .block
             height: 83vh
             .value-area >   div
@@ -537,7 +591,7 @@ $orange: #FF4D00
                         #countdown
                             color: #3ee9a5
                             font-size: 1.2rem
-                            font-weight: normal
+                            font-weight: bold
                             letter-spacing: 8px
                             border-radius: 0
                             border: 0
@@ -549,7 +603,7 @@ $orange: #FF4D00
                             top: -22px
                         h1
                             &::before
-                                +size(30px)
+                                +size(25px)
                         &.teamA
                             .logo
                                 transform: translateX(-160px)
@@ -578,7 +632,7 @@ $orange: #FF4D00
     .btn
         margin-top: 54px
 
-    .event-desc
+    .modal
         padding-bottom: 5% //12
         .block
             width: calc( 100vw - 5vw )
@@ -596,7 +650,20 @@ $orange: #FF4D00
             .all-list
                 &::before
                     margin: 25px 0 0 0
-
+            &.history
+                .allDropdowns
+                    .dropDown
+                        margin: 15px 0 15px 6px
+                        .history-item
+                            padding: 0.5rem
+                            h3
+                                font-size: 1rem
+                                span
+                                    display: block
+                                    margin-left: 0
+                                    margin-top: 5px
+                        .table-data
+                            padding: 0.5rem
 @media screen and ( max-width: 375px )
     .external-box
         main
@@ -608,7 +675,7 @@ $orange: #FF4D00
                 .container
                     .box
                         h1
-                            font-size: 1.2rem
+                            font-size: 1.1rem
 @media screen and ( max-width: 360px )
     .external-box
         main
@@ -618,4 +685,4 @@ $orange: #FF4D00
             .bottom-container .container .box
                 h1
                     &::before
-                        +size(25px)
+                        +size(20px)

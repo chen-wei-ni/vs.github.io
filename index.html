@@ -42,16 +42,16 @@
                 <span class="bonus">33,803,183.99</span>
               </h1>
             </div>
-            <div class="fishIcon">
+            <!-- <div class="fishIcon">
               <img src="./images/vs/fishIcon.png" alt="" />
-            </div>
+            </div> -->
             <div class="bottom-container a-mode">
               <div class="container">
                 <div class="teamA box">
-                  <figure class="logo">
+                  <a class="logo">
                     <img src="./images/vs/ct.png" alt="" />
-                  </figure>
-                  <h1>0</h1>
+                  </a>
+                  <h1>1225550000</h1>
                 </div>
                 <div class="timer">
                   <div id="countdown"></div>
@@ -84,33 +84,66 @@
               </div>
             </div>
           </main>
-          <div class="btn">
-            <button>
-              <span>
-                <svg
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 20 24"
-                  style="enable-background: new 0 0 20 24"
-                  xml:space="preserve"
-                >
-                  <style type="text/css">
-                    .st0 {
-                      fill: #3ee9a5;
-                    }
-                  </style>
-                  <path
-                    class="st0"
-                    d="M2,2h11.2L18,6.8V22H2V2z M0,0v24h20V6l-6-6H0z"
-                  />
-                  <rect x="4" y="18" class="st0" width="12" height="2" />
-                  <rect x="4" y="14" class="st0" width="12" height="2" />
-                  <rect x="4" y="10" class="st0" width="12" height="2" />
-                  <rect x="4" y="6" class="st0" width="9" height="2" />
-                </svg>
-              </span>
-              活動說明
-            </button>
+          <div class="buttons">
+            <div class="btn" id="event-btn">
+              <button>
+                <span>
+                  <svg
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 20 24"
+                    style="enable-background: new 0 0 20 24"
+                    xml:space="preserve"
+                  >
+                    <style type="text/css">
+                      .st0 {
+                        fill: #3ee9a5;
+                      }
+                    </style>
+                    <path
+                      class="st0"
+                      d="M2,2h11.2L18,6.8V22H2V2z M0,0v24h20V6l-6-6H0z"
+                    />
+                    <rect x="4" y="18" class="st0" width="12" height="2" />
+                    <rect x="4" y="14" class="st0" width="12" height="2" />
+                    <rect x="4" y="10" class="st0" width="12" height="2" />
+                    <rect x="4" y="6" class="st0" width="9" height="2" />
+                  </svg>
+                </span>
+                活動說明
+              </button>
+            </div>
+            <div class="btn last-data" id="history-btn">
+              <button>
+                <span>
+                  <svg
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 20 24"
+                    style="enable-background: new 0 0 20 24"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M93.9,2H105l4.8,4.8V22h-16V2z M91.9,0v24h20V6l-6-6H91.9z"
+                    />
+                    <rect x="95.8" y="18" width="12" height="2" />
+                    <rect x="95.8" y="14" width="12" height="2" />
+                    <rect x="95.8" y="10" width="12" height="2" />
+                    <rect x="95.8" y="6" width="9" height="2" />
+                    <path
+                      class="st0"
+                      d="M10,21.7c-5.4,0-9.7-4.4-9.7-9.7S4.6,2.3,10,2.3s9.7,4.4,9.7,9.7S15.4,21.7,10,21.7z M10,4.3
+	c-4.3,0-7.7,3.5-7.7,7.7c0,4.3,3.5,7.7,7.7,7.7c4.3,0,7.7-3.5,7.7-7.7C17.7,7.7,14.3,4.3,10,4.3z"
+                    />
+                    <path
+                      class="st0"
+                      d="M14.3,14H10c-0.6,0-1-0.4-1-1V6.2c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V12h3.3c0.6,0,1,0.4,1,1S14.8,14,14.3,14z"
+                    />
+                  </svg>
+                </span>
+                歷史紀錄
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -296,7 +329,7 @@
         </div>
       </div>
     </div>
-    <div class="event-desc">
+    <div class="modal" id="event">
       <div class="block">
         <div class="content">
           <div class="value-area">
@@ -381,6 +414,337 @@
       </div>
       <div class="close-btn">X</div>
     </div>
+    <div class="modal" id="history">
+      <div class="block history">
+        <div class="content allDropdowns">
+          <div class="dropDown">
+            <div class="history-item">
+              <h3>本期結果<span>(2024/9/01 ~ 10/31)</span></h3>
+              <i class="arrowOpen"
+                ><svg
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 28 17.2"
+                  style="enable-background: new 0 0 28 17.2"
+                  xml:space="preserve"
+                >
+                  <style type="text/css">
+                    .st {
+                      fill: none;
+                    }
+                    .st1 {
+                      fill: #3ee9a5;
+                    }
+                  </style>
+                  <path class="st" d="M38-15.8v48h-48v-48H38z" />
+                  <path
+                    class="st1"
+                    d="M25,0.2l3,3l-14,14L5.3,8.5L0,3.2l3-3l11,11.1L25,0.2z"
+                  />
+                </svg>
+              </i>
+            </div>
+            <div class="table-data">
+              <table>
+                <thead>
+                  <tr>
+                    <th>名次</th>
+                    <th>玩家ID</th>
+                    <th>投注額</th>
+                    <th>獎金</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>dsd**55</td>
+                    <td>1000</td>
+                    <td>1200000</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>dsds**aa</td>
+                    <td>1000</td>
+                    <td>100000</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>17</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>18</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>19</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>20</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="dropDown">
+            <div class="history-item">
+              <h3>上一期結果<span>(2024/8/01 ~ 8/31)</span></h3>
+              <i class="arrowOpen"
+                ><svg
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 28 17.2"
+                  style="enable-background: new 0 0 28 17.2"
+                  xml:space="preserve"
+                >
+                  <style type="text/css">
+                    .st {
+                      fill: none;
+                    }
+                    .st1 {
+                      fill: #3ee9a5;
+                    }
+                  </style>
+                  <path class="st" d="M38-15.8v48h-48v-48H38z" />
+                  <path
+                    class="st1"
+                    d="M25,0.2l3,3l-14,14L5.3,8.5L0,3.2l3-3l11,11.1L25,0.2z"
+                  />
+                </svg>
+              </i>
+            </div>
+            <div class="table-data">
+              <table>
+                <thead>
+                  <tr>
+                    <th>名次</th>
+                    <th>玩家ID</th>
+                    <th>投注額</th>
+                    <th>獎金</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>dsd**55</td>
+                    <td>1000</td>
+                    <td>20000</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>aaa**55</td>
+                    <td>1000</td>
+                    <td>10000</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>17</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>18</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>19</th>
+                    <td>dsds</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <th>20</th>
+                    <td>dsd</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="close-btn">X</div>
+    </div>
     <!--JS-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.countdown.js"></script>
@@ -394,5 +758,6 @@
     <script src="js/vs/eventPopup.js"></script>
     <script src="js/vs/progress.js"></script>
     <script src="js/vs/countdown.js"></script>
+    <script src="js/vs/dropDown.js"></script>
   </body>
 </html>
