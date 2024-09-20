@@ -313,7 +313,7 @@ $orange: #FF4D00
             color: #fff
             -webkit-overflow-scrolling: touch
             overflow-x: hidden
-            overflow-y: scroll
+            overflow-y: auto
             padding: 3.5%
 
             &::-webkit-scrollbar
@@ -441,43 +441,55 @@ $orange: #FF4D00
                             font-size: 12px
                             color: #3ee9a5
         &.history
-            .allDropdowns
-                .dropDown
-                    padding: 0.5rem
-                    background-color: #272727
+            .dropDown
+                position: relative
+                display: flex
+                border-radius: 0.25rem
+                overflow: hidden
+                border: 1px solid #fff
+                .history-item
+                    width: 100%
+                    font-size: 0.9rem
                     border-radius: 10px
-                    margin: 15px
-                    .history-item
-                        font-family: Roboto, "儷黑 Pro", 微软雅黑, 黑体, "LiHei Pro Medium", "Microsoft YaHei", SimHei, sans-serif
-                        display: flex
-                        align-items: center
-                        justify-content: space-between
-                        padding: 1rem
-                        cursor: pointer
-                        h3
-                            font-size: 1.2rem
-                            letter-spacing: 1px
-                            span
-                                margin-left: 5px
-                        i
-                            width: 15px
-                            transition: transform 0.3s
-                            &.up
-                                transform: rotate(180deg)
+                    padding: 1.2rem
+                    appearance: none
+                    border: 0
+                    outline: 0
+                    background: none
+                    color: inherit
+                    box-shadow: none
+                    cursor: pointer
+                    option
+                        color: #fff
+                        background-color: #000
+                        &:hover
+                            background-color: #3ee9a5
 
-                    .table-data
-                        padding: 1rem
-                        table
-                            +size(100%)
-                            text-align: center
-                            thead
-                                color: #000
-                                background-color: rgba(#3ee9a5,1)
-                            tr
-                                &:nth-child(even)
-                                    background-color: rgba(#000000,0.5)
-                            td,th
-                                padding: 1rem 0
+                &::after
+                    content: "\25BC"
+                    position: absolute
+                    font-size: 0.8rem
+                    display: inline-flex
+                    color: #3ee9a5
+                    right: 1.2rem
+                    top: 1.3rem
+                    transition: 0.25s all ease
+                    pointer-events: none // IMPORTANT to click on arrow
+
+            .table-data
+                margin-top: 1.2rem
+                table
+                    +size(100%)
+                    text-align: center
+                    thead
+                        color: #000
+                        background-color: rgba(#3ee9a5,1)
+                    tr
+                        &:nth-child(even)
+                            background-color: rgba(#222222,0.3)
+                    td,th
+                        padding: 1rem 0
+                        font-size: 0.9rem
     .close-btn
         +size(50px)
         font-size: 2rem
@@ -651,19 +663,21 @@ $orange: #FF4D00
                 &::before
                     margin: 25px 0 0 0
             &.history
-                .allDropdowns
-                    .dropDown
-                        margin: 15px 0 15px 6px
-                        .history-item
-                            padding: 0.5rem
-                            h3
-                                font-size: 1rem
-                                span
-                                    display: block
-                                    margin-left: 0
-                                    margin-top: 5px
-                        .table-data
-                            padding: 0.5rem
+                .content
+                    padding: 5%
+                .dropDown
+                    // margin: 15px 0 15px 6px
+                    .history-item
+                        // padding: 1rem
+                        h3
+                            font-size: 1rem
+                            span
+                                display: block
+                                margin-left: 0
+                                margin-top: 5px
+                .table-data
+                    margin-top: 1rem
+
 @media screen and ( max-width: 375px )
     .external-box
         main
