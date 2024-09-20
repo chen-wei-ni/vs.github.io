@@ -546,6 +546,7 @@ img {
   cursor: pointer;
 }
 .modal .block.history .dropDown .history-item option {
+  width: 100%;
   color: #fff;
   background-color: #000;
 }
