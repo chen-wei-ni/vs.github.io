@@ -523,6 +523,9 @@ img {
   font-size: 12px;
   color: #3ee9a5;
 }
+.modal .block.history .content {
+  overflow: hidden;
+}
 .modal .block.history .dropDown {
   position: relative;
   display: flex;
@@ -546,12 +549,9 @@ img {
   cursor: pointer;
 }
 .modal .block.history .dropDown .history-item option {
-  width: 100%;
   color: #fff;
   background-color: #000;
-}
-.modal .block.history .dropDown .history-item option:hover {
-  background-color: #3ee9a5;
+  padding: 10px 0;
 }
 .modal .block.history .dropDown::after {
   content: "▼";
@@ -566,6 +566,19 @@ img {
 }
 .modal .block.history .table-data {
   margin-top: 1.2rem;
+  height: 88%;
+  overflow-y: auto;
+}
+.modal .block.history .table-data::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.modal .block.history .table-data::-webkit-scrollbar-track {
+  margin: 3rem 0 0 0;
+}
+.modal .block.history .table-data::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
 }
 .modal .block.history .table-data table {
   width: 100%;
@@ -582,6 +595,18 @@ img {
 .modal .block.history .table-data table td, .modal .block.history .table-data table th {
   padding: 1rem 0;
   font-size: 0.9rem;
+}
+.modal .block.history .table-data table th:nth-child(1) {
+  width: 15%;
+}
+.modal .block.history .table-data table th:nth-child(2) {
+  width: 30%;
+}
+.modal .block.history .table-data table th:nth-child(3) {
+  width: 30%;
+}
+.modal .block.history .table-data table th:nth-child(4) {
+  width: 25%;
 }
 .modal .close-btn {
   width: 50px;
@@ -698,6 +723,9 @@ img {
   .modal .block .value-area > div.es-bonus .right-side {
     text-align: center;
   }
+  .modal .block.history .table-data {
+    margin-top: 1rem;
+  }
   .modal .close-btn {
     width: 40px;
     height: 40px;
@@ -710,7 +738,7 @@ img {
   }
   .external-box main .bottom-container .container .timer {
     width: 100%;
-    top: 124%;
+    top: 130%;
     animation: none;
   }
   .external-box main .bottom-container .container .timer #countdown {
@@ -788,9 +816,6 @@ img {
     display: block;
     margin-left: 0;
     margin-top: 5px;
-  }
-  .modal .block.history .table-data {
-    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 375px) {

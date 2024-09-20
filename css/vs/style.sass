@@ -441,6 +441,8 @@ $orange: #FF4D00
                             font-size: 12px
                             color: #3ee9a5
         &.history
+            .content
+                overflow: hidden
             .dropDown
                 position: relative
                 display: flex
@@ -460,11 +462,9 @@ $orange: #FF4D00
                     box-shadow: none
                     cursor: pointer
                     option
-                        width: 100%
                         color: #fff
                         background-color: #000
-                        &:hover
-                            background-color: #3ee9a5
+                        padding: 10px 0
 
                 &::after
                     content: "\25BC"
@@ -479,6 +479,18 @@ $orange: #FF4D00
 
             .table-data
                 margin-top: 1.2rem
+                height: 88%
+                overflow-y: auto
+                &::-webkit-scrollbar
+                    width: 6px
+                    height: 6px
+
+                &::-webkit-scrollbar-track
+                    margin: 3rem 0 0 0
+
+                &::-webkit-scrollbar-thumb
+                    background: rgba(#fff,0.3)
+                    border-radius: 10px
                 table
                     +size(100%)
                     text-align: center
@@ -491,6 +503,16 @@ $orange: #FF4D00
                     td,th
                         padding: 1rem 0
                         font-size: 0.9rem
+                    th
+                        &:nth-child(1)
+                            width: 15%
+                        &:nth-child(2)
+                            width: 30%
+                        &:nth-child(3)
+                            width: 30%
+                        &:nth-child(4)
+                            width: 25%
+
     .close-btn
         +size(50px)
         font-size: 2rem
@@ -585,6 +607,9 @@ $orange: #FF4D00
                     margin-top: 10px
                 &.es-bonus .right-side
                     text-align: center
+            &.history
+                .table-data
+                    margin-top: 1rem
         .close-btn
             +size(40px)
             font-size: 1.5rem
@@ -599,7 +624,7 @@ $orange: #FF4D00
                 .container
                     .timer
                         width: 100%
-                        top: 124%
+                        top: 130%
                         animation: none
                         #countdown
                             color: #3ee9a5
@@ -669,15 +694,12 @@ $orange: #FF4D00
                 .dropDown
                     // margin: 15px 0 15px 6px
                     .history-item
-                        // padding: 1rem
                         h3
                             font-size: 1rem
                             span
                                 display: block
                                 margin-left: 0
                                 margin-top: 5px
-                .table-data
-                    margin-top: 1rem
 
 @media screen and ( max-width: 375px )
     .external-box
